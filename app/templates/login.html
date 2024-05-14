@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+   
+   
+        <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="{{ url_for('login') }}" method="post">
+                <h1>About us</h1>
+                
+                <span>or use your email for registeration</span>
+                <input type="text" placeholder="Name" >
+                <input type="email" placeholder="Email" id="username" name="username" required>
+                <input type="password" placeholder="Password" id="password" name="password" required>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form action="{{ url_for('login') }}" method="POST">
+                <h1>Sign In</h1>
+               
+                <span>use your email password</span>
+                <input type="text" placeholder="Email" id="username" name="username" required>
+                <input type="password" placeholder="Password" id="password" name="password" required>
+                <a href="#">Forget Your Password?</a>
+                <button type="submit" value="Login">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome !</h1>
+                    <p>We specialize in helping you schedule your DAP projects efficiently.</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Scheduler!</h1>
+                    <p>Enter your personal details to use all of site features.</p>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
